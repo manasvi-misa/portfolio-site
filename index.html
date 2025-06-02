@@ -2,129 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VIVI-FLIX | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manasvi's Portfolio</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
+    /* RESET & BASE */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
     }
-
     body {
-      background-color: #141414;
-      color: white;
-      padding: 2rem;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      overflow-x: hidden;
     }
-
-    h1 {
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #e50914; /* Netflix Red Accent */
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+      color: #ccc;
+    }
+    a {
       color: #e50914;
-      font-size: 3rem;
-      margin-bottom: 2rem;
+      text-decoration: none;
+      font-weight: 500;
     }
-
-    .section {
-      margin-bottom: 3rem;
+    a:hover {
+      text-decoration: underline;
     }
-
-    .section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    /* CONTAINER */
+    .portfolio-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-
+    /* HORIZONTAL SLIDER STYLE */
     .slider {
       display: flex;
       overflow-x: auto;
-      gap: 1rem;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
+      scroll-behavior: smooth;
+      gap: 30px;
+      padding-bottom: 20px;
+      scrollbar-width: thin;
+      scrollbar-color: #e50914 transparent;
     }
-
+    /* Webkit scrollbar */
     .slider::-webkit-scrollbar {
-      display: none;
+      height: 8px;
     }
-
+    .slider::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .slider::-webkit-scrollbar-thumb {
+      background-color: #e50914;
+      border-radius: 10px;
+    }
+    /* EACH SECTION CARD */
     .card {
-      min-width: 250px;
-      background-color: #1e1e1e;
-      padding: 1rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      scroll-snap-align: start;
-      transition: transform 0.3s;
+      background-color: #222;
+      border-radius: 12px;
+      min-width: 300px;
+      flex: 0 0 auto;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+      transition: transform 0.3s ease;
     }
-
     .card:hover {
       transform: scale(1.05);
     }
-
-    .card p {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
+    /* BUTTONS */
+    .btn {
+      background-color: #e50914;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #b20710;
     }
   </style>
 </head>
 <body>
-  <h1>WELCOME TO VIVI-FLIX 🎬</h1>
+  <div class="portfolio-container">
+    <h1 style="text-align:center; margin-bottom: 40px;">Manasvi Saxena’s Portfolio</h1>
 
-  <div class="section">
-    <h2>👩‍💻 PERSONAL INTRO</h2>
-    <div class="slider">
-      <div class="card">
-        <h3>Hi I'm Manasvi aka Vivi</h3>
-        <p>Coding baddie + AI girlie who slays bugs and feelings.</p>
-      </div>
-    </div>
-  </div>
+    <div class="slider" tabindex="0">
+      <!-- Personal Intro -->
+      <section class="card" aria-label="Personal Introduction">
+        <h2>Personal Intro</h2>
+        <p>Hi, I’m Manasvi Saxena. I specialize in AI and cybersecurity, blending innovation with precision to create smart, secure solutions. I’m committed to continuous growth and delivering excellence in every project.</p>
+      </section>
 
-  <div class="section">
-    <h2>🧠 SUMMARY</h2>
-    <div class="slider">
-      <div class="card">
-        <h3>Creative Technologist</h3>
-        <p>Dreamy UX, AI/ML, and Cybersecurity enthusiast ✨</p>
-      </div>
-    </div>
-  </div>
+      <!-- Summary -->
+      <section class="card" aria-label="Summary">
+        <h2>Summary</h2>
+        <p>Specializing in AI and cybersecurity, with hands-on experience developing innovative AI models designed to streamline online shopping and enhance user convenience. Successfully created Misa-AI, an intelligent assistant that simplifies account creation, product availability checks, and order placements while prioritizing user privacy and security.
+Demonstrated strong problem-solving skills by integrating advanced machine learning techniques with cybersecurity protocols to protect sensitive data and ensure seamless digital experiences. Proven track record of collaborating with small brands in the jewelry and makeup sectors, boosting their online visibility through strategic content curation and marketing.
+Known for a detail-oriented approach and a growth mindset, constantly seeking new challenges and learning opportunities to stay ahead in fast-evolving tech landscapes. Passionate about using technology to make everyday tasks easier and safer, with a focus on creating meaningful impact through innovative solutions.</p>
+      </section>
 
-  <div class="section">
-    <h2>💼 PROJECTS MADE</h2>
-    <div class="slider">
-      <div class="card"><h3>MISA-AI</h3><p>Online shopping assistant</p></div>
-      <div class="card"><h3>Pinterest Collab Hub</h3><p>For small brands</p></div>
-      <div class="card"><h3>Ex-Analyzer Bot</h3><p>Breakup wisdom in one script</p></div>
-      <div class="card"><h3>AstroMatch AI</h3><p>Astrology-based love matcher</p></div>
-    </div>
-  </div>
+      <!-- Projects Made -->
+      <section class="card" aria-label="Projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="https://github.com/manasvi-misa/project1" target="_blank" rel="noopener">AI Shopping Assistant</a></li>
+          <li><a href="https://github.com/manasvi-misa/project2" target="_blank" rel="noopener">Portfolio Redesign</a></li>
+          <li><a href="https://github.com/manasvi-misa/project3" target="_blank" rel="noopener">React Blog App</a></li>
+        </ul>
+      </section>
 
-  <div class="section">
-    <h2>📜 CERTIFICATES</h2>
-    <div class="slider">
-      <div class="card"><h3>Google Cybersecurity</h3></div>
-      <div class="card"><h3>AWS Machine Learning</h3></div>
-      <div class="card"><h3>Stanford CS50 AI</h3></div>
-    </div>
-  </div>
+      <!-- Certificates -->
+      <section class="card" aria-label="Certificates">
+        <h2>Certificates</h2>
+        <ul>
+          <li>[Tata Group - Cybersecurity Analyst Job Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_Bv4ziTh32EyCNMGPb_1738950689384_completion_certificate.pdf)</li>
+          <li>[Goldman Sachs - Software Engineering Job Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/MBA4MnZTNFEoJZGnk/NPdeQ43o8P9HJmJzg_MBA4MnZTNFEoJZGnk_Bv4ziTh32EyCNMGPb_1738859554108_completion_certificate.pdf)</li>
+          <li>[Google Cybersecurity Professional Certificate](https://www.coursera.org/account/accomplishments/professional-cert/certificate/B1HGMGHZSL8F)</li>
+        </ul>
+      </section>
 
-  <div class="section">
-    <h2>🧳 INTERNSHIPS</h2>
-    <div class="slider">
-      <div class="card"><h3>NTT Data - AI Intern</h3></div>
-      <div class="card"><h3>Fujitsu - UX Research</h3></div>
-      <div class="card"><h3>Startup Collab - Shopify AI</h3></div>
-    </div>
-  </div>
+      <!-- Internships -->
+      <section class="card" aria-label="Internships">
+        <h2>Internships</h2>
+        <p>Software Development Intern (Cybersecurity Domain)
+Codemania | May 2025 – July 2025</p>
+      </section>
 
-  <div class="section">
-    <h2>🔗 ALL LINKS</h2>
-    <div class="slider">
-      <div class="card"><h3><a href="https://github.com" target="_blank" style="color:#e50914;">GitHub</a></h3></div>
-      <div class="card"><h3><a href="https://linkedin.com" target="_blank" style="color:#e50914;">LinkedIn</a></h3></div>
-      <div class="card"><h3><a href="https://notion.so" target="_blank" style="color:#e50914;">Resume</a></h3></div>
-      <div class="card"><h3><a href="https://pinterest.com" target="_blank" style="color:#e50914;">Pinterest</a></h3></div>
+      <!-- All Links -->
+      <section class="card" aria-label="All Links">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="www.linkedin.com/in/manasvi-saxena-061f" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/manasvi-misa" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:manasvi.infp@gmail.com">Email Me</a></li>
+        </ul>
+      </section>
     </div>
   </div>
 </body>
