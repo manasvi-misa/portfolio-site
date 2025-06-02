@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manasvi's Portfolio</title>
-  <!-- Google Fonts: Poppins -->
+  <title>Manasvi's Portfolio - Accordion Style</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
-    /* RESET & BASE */
+    /* RESET */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,17 +16,69 @@
       font-family: 'Poppins', sans-serif;
       background-color: #121212;
       color: #eee;
-      overflow-x: hidden;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    h2 {
-      margin-bottom: 10px;
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
       font-weight: 700;
-      color: #e50914; /* Netflix Red Accent */
+      color: #e50914;
     }
-    p {
+    /* ACCORDION CONTAINER */
+    .accordion {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(229,9,20,0.4);
+      background-color: #222;
+      margin-bottom: 15px;
+    }
+    /* BUTTON (HEADER) */
+    .accordion-header {
+      background-color: #1f1f1f;
+      cursor: pointer;
+      padding: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #e50914;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    .accordion-header:hover {
+      background-color: #330000;
+    }
+    /* ICON */
+    .accordion-header::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: #e50914;
+      transition: transform 0.3s ease;
+    }
+    .accordion-header.active::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+    /* PANEL (CONTENT) */
+    .accordion-panel {
+      background-color: #222;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 20px;
+      color: #ccc;
       font-weight: 300;
       line-height: 1.5;
-      color: #ccc;
+    }
+    .accordion-panel.open {
+      padding: 20px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
     }
     a {
       color: #e50914;
@@ -37,120 +88,90 @@
     a:hover {
       text-decoration: underline;
     }
-    /* CONTAINER */
-    .portfolio-container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    /* HORIZONTAL SLIDER STYLE */
-    .slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 30px;
-      padding-bottom: 20px;
-      scrollbar-width: thin;
-      scrollbar-color: #e50914 transparent;
-    }
-    /* Webkit scrollbar */
-    .slider::-webkit-scrollbar {
-      height: 8px;
-    }
-    .slider::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .slider::-webkit-scrollbar-thumb {
-      background-color: #e50914;
-      border-radius: 10px;
-    }
-    /* EACH SECTION CARD */
-    .card {
-      background-color: #222;
-      border-radius: 12px;
-      min-width: 300px;
-      flex: 0 0 auto;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    /* BUTTONS */
-    .btn {
-      background-color: #e50914;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 12px;
-      display: inline-block;
-    }
-    .btn:hover {
-      background-color: #b20710;
-    }
   </style>
 </head>
 <body>
-  <div class="portfolio-container">
-    <h1 style="text-align:center; margin-bottom: 40px;">Manasvi Saxena’s Portfolio</h1>
+  <h1>Manasvi Saxena’s Portfolio</h1>
 
-    <div class="slider" tabindex="0">
-      <!-- Personal Intro -->
-      <section class="card" aria-label="Personal Introduction">
-        <h2>Personal Intro</h2>
-        <p>Hi, I’m Manasvi Saxena. I specialize in AI and cybersecurity, blending innovation with precision to create smart, secure solutions. I’m committed to continuous growth and delivering excellence in every project.</p>
-      </section>
-
-      <!-- Summary -->
-      <section class="card" aria-label="Summary">
-        <h2>Summary</h2>
-        <p>Specializing in AI and cybersecurity, with hands-on experience developing innovative AI models designed to streamline online shopping and enhance user convenience. Successfully created Misa-AI, an intelligent assistant that simplifies account creation, product availability checks, and order placements while prioritizing user privacy and security.
-Demonstrated strong problem-solving skills by integrating advanced machine learning techniques with cybersecurity protocols to protect sensitive data and ensure seamless digital experiences. Proven track record of collaborating with small brands in the jewelry and makeup sectors, boosting their online visibility through strategic content curation and marketing.
-Known for a detail-oriented approach and a growth mindset, constantly seeking new challenges and learning opportunities to stay ahead in fast-evolving tech landscapes. Passionate about using technology to make everyday tasks easier and safer, with a focus on creating meaningful impact through innovative solutions.</p>
-      </section>
-
-      <!-- Projects Made -->
-      <section class="card" aria-label="Projects">
-        <h2>Projects</h2>
-        <ul>
-          <li><a href="https://github.com/manasvi-misa/project1" target="_blank" rel="noopener">AI Shopping Assistant</a></li>
-          <li><a href="https://github.com/manasvi-misa/project2" target="_blank" rel="noopener">Portfolio Redesign</a></li>
-          <li><a href="https://github.com/manasvi-misa/project3" target="_blank" rel="noopener">React Blog App</a></li>
-        </ul>
-      </section>
-
-      <!-- Certificates -->
-      <section class="card" aria-label="Certificates">
-        <h2>Certificates</h2>
-        <ul>
-          <li>[Tata Group - Cybersecurity Analyst Job Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_Bv4ziTh32EyCNMGPb_1738950689384_completion_certificate.pdf)</li>
-          <li>[Goldman Sachs - Software Engineering Job Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/MBA4MnZTNFEoJZGnk/NPdeQ43o8P9HJmJzg_MBA4MnZTNFEoJZGnk_Bv4ziTh32EyCNMGPb_1738859554108_completion_certificate.pdf)</li>
-          <li>[Google Cybersecurity Professional Certificate](https://www.coursera.org/account/accomplishments/professional-cert/certificate/B1HGMGHZSL8F)</li>
-        </ul>
-      </section>
-
-      <!-- Internships -->
-      <section class="card" aria-label="Internships">
-        <h2>Internships</h2>
-        <p>Software Development Intern (Cybersecurity Domain)
-Codemania | May 2025 – July 2025</p>
-      </section>
-
-      <!-- All Links -->
-      <section class="card" aria-label="All Links">
-        <h2>Links</h2>
-        <ul>
-          <li><a href="www.linkedin.com/in/manasvi-saxena-061f" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/manasvi-misa" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="mailto:manasvi.infp@gmail.com">Email Me</a></li>
-        </ul>
-      </section>
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="intro-panel" id="intro-header">Personal Intro</button>
+    <div id="intro-panel" class="accordion-panel" role="region" aria-labelledby="intro-header">
+      <p>Hi, I’m Manasvi Saxena. I specialize in AI and cybersecurity, blending innovation with precision to create smart, secure solutions. I’m committed to continuous growth and delivering excellence in every project.</p>
     </div>
   </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="summary-panel" id="summary-header">Summary</button>
+    <div id="summary-panel" class="accordion-panel" role="region" aria-labelledby="summary-header">
+      <p>Specializing in AI and cybersecurity, with hands-on experience developing innovative AI models designed to streamline online shopping and enhance user convenience. Successfully created Misa-AI, an intelligent assistant that simplifies account creation, product availability checks, and order placements while prioritizing user privacy and security.
+      Demonstrated strong problem-solving skills by integrating advanced machine learning techniques with cybersecurity protocols to protect sensitive data and ensure seamless digital experiences. Proven track record of collaborating with small brands in the jewelry and makeup sectors, boosting their online visibility through strategic content curation and marketing.
+      Known for a detail-oriented approach and a growth mindset, constantly seeking new challenges and learning opportunities to stay ahead in fast-evolving tech landscapes. Passionate about using technology to make everyday tasks easier and safer, with a focus on creating meaningful impact through innovative solutions.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="projects-panel" id="projects-header">Projects</button>
+    <div id="projects-panel" class="accordion-panel" role="region" aria-labelledby="projects-header">
+      <ul>
+        <li><a href="https://github.com/manasvi-misa/project1" target="_blank" rel="noopener">AI Shopping Assistant</a></li>
+        <li><a href="https://github.com/manasvi-misa/project2" target="_blank" rel="noopener">Portfolio Redesign</a></li>
+        <li><a href="https://github.com/manasvi-misa/project3" target="_blank" rel="noopener">React Blog App</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="certificates-panel" id="certificates-header">Certificates</button>
+    <div id="certificates-panel" class="accordion-panel" role="region" aria-labelledby="certificates-header">
+      <ul>
+        <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_Bv4ziTh32EyCNMGPb_1738950689384_completion_certificate.pdf" target="_blank" rel="noopener">Tata Group - Cybersecurity Analyst Job Simulation</a></li>
+        <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/MBA4MnZTNFEoJZGnk/NPdeQ43o8P9HJmJzg_MBA4MnZTNFEoJZGnk_Bv4ziTh32EyCNMGPb_1738859554108_completion_certificate.pdf" target="_blank" rel="noopener">Goldman Sachs - Software Engineering Job Simulation</a></li>
+        <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/B1HGMGHZSL8F" target="_blank" rel="noopener">Google Cybersecurity Professional Certificate</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="internships-panel" id="internships-header">Internships</button>
+    <div id="internships-panel" class="accordion-panel" role="region" aria-labelledby="internships-header">
+      <p>Software Development Intern (Cybersecurity Domain) <br /> Codemania | May 2025 – July 2025</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="links-panel" id="links-header">Links</button>
+    <div id="links-panel" class="accordion-panel" role="region" aria-labelledby="links-header">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/manasvi-saxena-061f" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/manasvi-misa" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:manasvi.infp@gmail.com">Email Me</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const expanded = header.getAttribute('aria-expanded') === 'true';
+        // Close all first (for accordion effect)
+        headers.forEach(h => {
+          h.setAttribute('aria-expanded', 'false');
+          h.classList.remove('active');
+          document.getElementById(h.getAttribute('aria-controls')).style.maxHeight = null;
+          document.getElementById(h.getAttribute('aria-controls')).classList.remove('open');
+        });
+
+        if (!expanded) {
+          header.setAttribute('aria-expanded', 'true');
+          header.classList.add('active');
+          const panel = document.getElementById(header.getAttribute('aria-controls'));
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
