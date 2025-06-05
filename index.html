@@ -3,100 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manasvi's Portfolio - Accordion Style</title>
+  <title>Manasvi Saxena's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdf6f0;
-  color: #333;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: #d36c6c;
-}
-.accordion {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(211, 108, 108, 0.2);
-  background-color: #fff;
-  margin-bottom: 15px;
-}
-.accordion-header {
-  background-color: #fceae8;
-  cursor: pointer;
-  padding: 20px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #d36c6c;
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-.accordion-header:hover {
-  background-color: #f8d7da;
-}
-.accordion-header::after {
-  content: "+";
-  font-size: 1.5rem;
-  color: #d36c6c;
-  transition: transform 0.3s ease;
-}
-.accordion-header.active::after {
-  content: "−";
-  transform: rotate(180deg);
-}
-.accordion-panel {
-  background-color: #fff;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-  padding: 0 20px;
-  color: #555;
-  font-weight: 300;
-  line-height: 1.5;
-}
-.accordion-panel.open {
-  padding: 20px;
-}
-a {
-  color: #d36c6c;
-  text-decoration: none;
-  font-weight: 500;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-    /* RESET */
+    /* Reset and Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    /* ACCORDION CONTAINER */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #6c5ce7;
+    }
+    /* Accordion Styles */
     .accordion {
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(229,9,20,0.4);
-      background-color: #222;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+      background-color: #fff;
       margin-bottom: 15px;
     }
-    /* BUTTON (HEADER) */
     .accordion-header {
-      background-color: #1f1f1f;
+      background-color: #dfe6e9;
       cursor: pointer;
       padding: 20px;
       font-weight: 700;
       font-size: 1.2rem;
-      color: #e50914;
+      color: #6c5ce7;
       user-select: none;
       display: flex;
       justify-content: space-between;
@@ -104,27 +48,25 @@ a:hover {
       transition: background-color 0.3s ease;
     }
     .accordion-header:hover {
-      background-color: #330000;
+      background-color: #b2bec3;
     }
-    /* ICON */
     .accordion-header::after {
       content: "+";
       font-size: 1.5rem;
-      color: #e50914;
+      color: #6c5ce7;
       transition: transform 0.3s ease;
     }
     .accordion-header.active::after {
       content: "−";
       transform: rotate(180deg);
     }
-    /* PANEL (CONTENT) */
     .accordion-panel {
-      background-color: #222;
+      background-color: #fff;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.35s ease;
       padding: 0 20px;
-      color: #ccc;
+      color: #555;
       font-weight: 300;
       line-height: 1.5;
     }
@@ -136,7 +78,7 @@ a:hover {
       margin-top: 10px;
     }
     a {
-      color: #e50914;
+      color: #6c5ce7;
       text-decoration: none;
       font-weight: 500;
     }
@@ -151,14 +93,28 @@ a:hover {
   <div class="accordion">
     <button class="accordion-header" aria-expanded="false" aria-controls="intro-panel" id="intro-header">Personal Intro</button>
     <div id="intro-panel" class="accordion-panel" role="region" aria-labelledby="intro-header">
-      <p>Hi, I’m Manasvi Saxena. I specialize in AI and cybersecurity, blending innovation with precision to create smart, secure solutions. I’m committed to continuous growth and delivering excellence in every project.</p>
+      <p>Hi, I’m Manasvi Saxena. A passionate developer with expertise in AI, cybersecurity, and web development. I thrive on creating innovative solutions that are both secure and user-friendly.</p>
     </div>
   </div>
 
   <div class="accordion">
     <button class="accordion-header" aria-expanded="false" aria-controls="summary-panel" id="summary-header">Summary</button>
     <div id="summary-panel" class="accordion-panel" role="region" aria-labelledby="summary-header">
-      <p>Specializing in AI and cybersecurity with hands-on experience creating smart AI solutions like Misa-AI to simplify online shopping while keeping user data safe. Skilled at blending machine learning with security protocols to deliver smooth, secure digital experiences. Proven success working with small brands to boost their online presence through strategic marketing. Detail-oriented and always hungry to learn, driven to create tech that makes life easier and safer.</p>
+      <p>With a strong foundation in AI and cybersecurity, I have developed smart solutions like Misa-AI to enhance online shopping experiences while ensuring data security. My web development skills enable me to build responsive and efficient web applications. I am committed to continuous learning and delivering excellence in every project.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="skills-panel" id="skills-header">Skills</button>
+    <div id="skills-panel" class="accordion-panel" role="region" aria-labelledby="skills-header">
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, C++, JavaScript, PHP</li>
+        <li><strong>Front-end:</strong> HTML, CSS, Bootstrap</li>
+        <li><strong>Back-end:</strong> Django, Node.js, Laravel</li>
+        <li><strong>Databases:</strong> SQLite3, MySQL, MongoDB</li>
+        <li><strong>Tools & Platforms:</strong> AWS EC2, S3, Google APIs, Dialogflow, Git</li>
+        <li><strong>Operating Systems:</strong> Windows, Linux</li>
+      </ul>
     </div>
   </div>
 
@@ -187,7 +143,11 @@ a:hover {
   <div class="accordion">
     <button class="accordion-header" aria-expanded="false" aria-controls="internships-panel" id="internships-header">Internships</button>
     <div id="internships-panel" class="accordion-panel" role="region" aria-labelledby="internships-header">
-      <p>Software Development Intern (Cybersecurity Domain) <br /> Codemania | May 2025 – July 2025</p>
+      <ul>
+        <li><strong>Software Development Intern (Cybersecurity Domain)</strong> - Codemania | May 2025 – July 2025</li>
+        <li><strong>Software Developer Intern</strong> - Robonomics AI | May 2018 – July 2018</li>
+        <li><strong>Back-end Developer Intern</strong> - Comezo | Jan 2018 – Mar 2018</li>
+      </ul>
     </div>
   </div>
 
@@ -208,12 +168,12 @@ a:hover {
     headers.forEach(header => {
       header.addEventListener('click', () => {
         const expanded = header.getAttribute('aria-expanded') === 'true';
-        // Close all first (for accordion effect)
         headers.forEach(h => {
           h.setAttribute('aria-expanded', 'false');
           h.classList.remove('active');
-          document.getElementById(h.getAttribute('aria-controls')).style.maxHeight = null;
-          document.getElementById(h.getAttribute('aria-controls')).classList.remove('open');
+          const panel = document.getElementById(h.getAttribute('aria-controls'));
+          panel.style.maxHeight = null;
+          panel.classList.remove('open');
         });
 
         if (!expanded) {
