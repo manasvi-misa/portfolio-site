@@ -6,25 +6,80 @@
   <title>Manasvi's Portfolio - Accordion Style</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6f0;
+  color: #333;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #d36c6c;
+}
+.accordion {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(211, 108, 108, 0.2);
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+.accordion-header {
+  background-color: #fceae8;
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d36c6c;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+  background-color: #f8d7da;
+}
+.accordion-header::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: #d36c6c;
+  transition: transform 0.3s ease;
+}
+.accordion-header.active::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+.accordion-panel {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  padding: 0 20px;
+  color: #555;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.accordion-panel.open {
+  padding: 20px;
+}
+a {
+  color: #d36c6c;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  text-decoration: underline;
+}
+
     /* RESET */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #121212;
-      color: #eee;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: 700;
-      color: #e50914;
     }
     /* ACCORDION CONTAINER */
     .accordion {
