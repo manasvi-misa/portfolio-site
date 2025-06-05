@@ -22,40 +22,23 @@
     h1 {
       text-align: center;
       color: #a06cd5;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1rem;
+      color: #666;
+    }
+    section {
       margin-bottom: 40px;
     }
-    .accordion {
-      background-color: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .accordion-header {
-      background-color: #f3e8ff;
-      padding: 16px 20px;
-      cursor: pointer;
-      font-weight: 600;
+    h2 {
       color: #6a4caf;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .accordion-header::after {
-      content: '+';
-      font-weight: bold;
-    }
-    .accordion-header.active::after {
-      content: '−';
-    }
-    .accordion-panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      padding: 0 20px;
-    }
-    .accordion-panel.open {
-      padding: 16px 20px;
-      max-height: 500px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
     }
     ul {
       padding-left: 20px;
@@ -68,118 +51,83 @@
     a:hover {
       text-decoration: underline;
     }
-    p, li {
+    li, p {
       line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <h1>Manasvi Saxena’s Portfolio</h1>
+  <p class="subtitle">Welcome to my portfolio, here are all my necessary personal and professional details.</p>
 
-  <div class="accordion">
-    <div class="accordion-header">Personal Intro</div>
-    <div class="accordion-panel">
-      <p>Passionate about AI and cybersecurity, with practical experience in threat detection and secure software development. Creator of Misa-AI — an AI-powered virtual shopping assistant. Experienced with ethical hacking tools, Python, and Wireshark.</p>
-    </div>
-  </div>
+  <section>
+    <h2>Personal Intro</h2>
+    <p>Passionate about AI and cybersecurity, with practical experience in threat detection and secure software development. Creator of Misa-AI — an AI-powered virtual shopping assistant. Experienced with ethical hacking tools, Python, and Wireshark.</p>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Skills</div>
-    <div class="accordion-panel">
-      <ul>
-        <li><strong>Technical:</strong> Python, HTML, CSS, Git, SQL, Java (basic), Linux</li>
-        <li><strong>Cybersecurity:</strong> Ethical Hacking, Firewall Management, Data Encryption, Threat Detection</li>
-        <li><strong>Soft Skills:</strong> Problem Solving, Team Collaboration, Critical Thinking, Communication</li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Technical:</strong> Python, HTML, CSS, Git, SQL, Java (basic), Linux</li>
+      <li><strong>Cybersecurity:</strong> Ethical Hacking, Firewall Management, Data Encryption, Threat Detection</li>
+      <li><strong>Soft Skills:</strong> Problem Solving, Team Collaboration, Critical Thinking, Communication</li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Projects</div>
-    <div class="accordion-panel">
-      <ul>
-        <li><strong>Misa-AI</strong>: AI shopping assistant for intuitive browsing and real-time product recommendations<br />
-          <a href="https://misa-ai.vercel.app" target="_blank">Live Site</a> |
-          <a href="https://github.com/manasvi-misa/misa-ai-landing" target="_blank">GitHub Repo</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Misa-AI</strong>: AI shopping assistant for intuitive browsing and real-time product recommendations<br />
+        <a href="https://misa-ai.vercel.app" target="_blank">Live Site</a> |
+        <a href="https://github.com/manasvi-misa/misa-ai-landing" target="_blank">GitHub Repo</a>
+      </li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Internship</div>
-    <div class="accordion-panel">
-      <p><strong>Cybersecurity Intern – Codemania</strong><br />May 2025 – July 2025 | Visakhapatnam, IN</p>
-      <ul>
-        <li>Assisted with penetration testing and vulnerability assessment under senior guidance</li>
-        <li>Collaborated with devs to identify bugs and apply secure coding practices</li>
-        <li>Worked hands-on with Burp Suite and Wireshark</li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Internship</h2>
+    <p><strong>Cybersecurity Intern – Codemania</strong><br />May 2025 – July 2025 | Visakhapatnam, IN</p>
+    <ul>
+      <li>Assisted with penetration testing and vulnerability assessment under senior guidance</li>
+      <li>Collaborated with developers to identify bugs and apply secure coding practices</li>
+      <li>Worked hands-on with Burp Suite and Wireshark</li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Certifications</div>
-    <div class="accordion-panel">
-      <ul>
-        <li><strong>Cybersecurity Analyst Job Simulation</strong> – TATA Groups (02/2025)</li>
-        <li><strong>Software Engineering Job Simulation</strong> – Goldman Sachs (02/2025)</li>
-        <li><strong>Cybersecurity Professional Certificate</strong> – Google (05/2025)</li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li><strong>Cybersecurity Analyst Job Simulation</strong> – TATA Groups (02/2025)</li>
+      <li><strong>Software Engineering Job Simulation</strong> – Goldman Sachs (02/2025)</li>
+      <li><strong>Cybersecurity Professional Certificate</strong> – Google (05/2025)</li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Education</div>
-    <div class="accordion-panel">
-      <ul>
-        <li><strong>B.Tech in CSE</strong> – GITAM University (2023–2027), Visakhapatnam</li>
-        <li><strong>Schooling</strong> – Choithram School North Campus, Indore (2011–2023)</li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in CSE</strong> – GITAM University (2023–2027), Visakhapatnam</li>
+      <li><strong>Schooling</strong> – Choithram School North Campus, Indore (2011–2023)</li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Languages</div>
-    <div class="accordion-panel">
-      <ul>
-        <li>English – Full Professional</li>
-        <li>Hindi – Native/Bilingual</li>
-        <li>French, German – Limited Working</li>
-        <li>Marathi, Telugu – Elementary</li>
-      </ul>
-    </div>
-  </div>
+  <section>
+    <h2>Languages</h2>
+    <ul>
+      <li>English – Full Professional</li>
+      <li>Hindi – Native/Bilingual</li>
+      <li>French, German – Limited Working</li>
+      <li>Marathi, Telugu – Elementary</li>
+    </ul>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-header">Links</div>
-    <div class="accordion-panel">
-      <ul>
-        <li><a href="mailto:manasvi.infp@gmail.com">manasvi.infp@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/manasvi-saxena-061f" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/manasvi-misa" target="_blank">GitHub</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <script>
-    const headers = document.querySelectorAll('.accordion-header');
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const panel = header.nextElementSibling;
-        const isActive = header.classList.contains('active');
-        headers.forEach(h => h.classList.remove('active'));
-        document.querySelectorAll('.accordion-panel').forEach(p => {
-          p.style.maxHeight = null;
-          p.classList.remove('open');
-        });
-        if (!isActive) {
-          header.classList.add('active');
-          panel.classList.add('open');
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
-    });
-  </script>
+  <section>
+    <h2>Links</h2>
+    <ul>
+      <li><a href="mailto:manasvi.infp@gmail.com">manasvi.infp@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/manasvi-saxena-061f" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/manasvi-misa" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
 </body>
 </html>
